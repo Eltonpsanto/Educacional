@@ -1,0 +1,26 @@
+```{=html}
+<style>
+  body{text-align: justify}
+</style>
+```
+
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+# Preface {.unnumbered}
+
+Edumetria no Quarto book.
+
+É o método de mensuração das variáveis relacionadas ao processo de ensino e aprendizagem conjugado com interpretações qualitativas, sensíveis e sociais. É a interface entre a análise quantitativa e qualitativa na área do conhecimento da Educação que emerge uma síntese.[1][2] É a aplicação da Estatística à área de Educação, com forte colaboração da Pedagogia. Essa Estatística Educacional é composta por muitos métodos, destacando-se a Teoria Clássica de Medidas, a Teoria da Resposta ao Item, Modelagem Linear Hierarquica, Regressão Quantílica, dentre outras (Andrade, Tavares, Valle, 2000).
+
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>. 
+
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::

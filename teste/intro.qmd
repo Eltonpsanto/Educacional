@@ -1,0 +1,313 @@
+# Introduction
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+## Funções e Distribruiçoes Graficas
+
+::: {.callout-note icon="TRUE"}
+Para gerar o gráfico das funções $$f(x)=x2−5x+6 \\ f(x) = x^2 - 5x + 6 \\  f(x)=x2−5x+6$$ no intervalo.
+
+$x∈[0,4]sin[0, 4]x∈[0,4]$ utilizando a linguagem de programação R, você pode seguir os seguintes passos:
+
+
+:::
+### Gráfico da função f(x) = x\^2 - 5x + 6
+
+```{r}
+
+# Definir a função
+f <- function(x) {
+  return(x^2 - 5*x + 6)
+}
+
+# Gerar os valores de x no intervalo [0, 4]
+x_vals <- seq(0, 4, by = 0.01)
+
+# Calcular os valores de f(x) para cada valor de x
+y_vals <- f(x_vals)
+
+# Plotar o gráfico
+plot(x_vals, y_vals, type = "l", col = "blue", lwd = 2,
+     xlab = "x", ylab = "f(x)", main = "Gráfico da função f(x) = x^2 - 5x + 6")
+
+```
+### Função de densidade e Distribuição da N(0,1).
+
+Que na pratica seria a distribuição normal (0,1), em um lado a densidade em que ela assume e no outro a distribuição.
+
+```{r}
+# Gerar os valores de x para o gráfico
+x_vals <- seq(-4, 4, by = 0.01)
+
+# Calcular a densidade da N(0,1) (função de densidade)
+density_vals <- dnorm(x_vals, mean = 0, sd = 1)
+
+# Calcular a função de distribuição acumulada (CDF) da N(0,1)
+cdf_vals <- pnorm(x_vals, mean = 0, sd = 1)
+
+# Plotar ambos os gráficos em um só
+par(mfrow = c(1, 2))  # Dividir a tela em 2 gráficos (1 linha, 2 colunas)
+
+# Gráfico da densidade
+plot(x_vals, density_vals, type = "l", col = "blue", lwd = 2,
+     xlab = "x", ylab = "Densidade", main = "Densidade da N(0,1)")
+
+# Gráfico da função de distribuição acumulada (CDF)
+plot(x_vals, cdf_vals, type = "l", col = "red", lwd = 2,
+     xlab = "x", ylab = "F(x)", main = "Função de Distribuição da N(0,1)")
+
+# Restaurar o layout do gráfico
+par(mfrow = c(1, 1))  # Voltar para o layout padrão
+```
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+```{r}
+ #Definir a função f(x)
+f <- function(x, a, b, D) {
+  return(1 / (1 + exp(-D * a * (x - b))))
+}
+
+# Definir os parâmetros
+a <- 1.5
+b <- 1
+D1 <- 1
+D2 <- 1.7
+
+# Gerar os valores de x no intervalo
+x_vals <- seq(-5, 5, by = 0.01)
+
+# Calcular os valores de f(x) para os dois casos de D
+y_vals_D1 <- f(x_vals, a, b, D1)
+y_vals_D2 <- f(x_vals, a, b, D2)
+
+# Plotar os gráficos
+plot(x_vals, y_vals_D1, type = "l", col = "blue", lwd = 2, 
+     xlab = "x", ylab = "f(x)", main = "Gráfico de f(x) para D=1 e D=1.7")
+lines(x_vals, y_vals_D2, col = "red", lwd = 2)
+
+# Adicionar uma legenda
+legend("topleft", legend = c("D = 1", "D = 1.7"), col = c("blue", "red"), lwd = 2)
+```
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+```{r}
+# Definir a função f(x)
+f <- function(x, a, b, D) {
+  return(1 / (1 + exp(-D * a * (x - b))))
+}
+
+# Definir os parâmetros
+a <- 1.5
+b <- 1
+D1 <- 1
+D2 <- 1.7
+
+# Gerar os valores de x no intervalo
+x_vals <- seq(-5, 5, by = 0.01)
+
+# Calcular os valores de f(x) para os dois casos de D
+y_vals_D1 <- f(x_vals, a, b, D1)
+y_vals_D2 <- f(x_vals, a, b, D2)
+
+# Plotar os gráficos
+plot(x_vals, y_vals_D1, type = "l", col = "blue", lwd = 2, 
+     xlab = "x", ylab = "f(x)", main = "Gráfico de f(x) para D=1 e D=1.7")
+lines(x_vals, y_vals_D2, col = "red", lwd = 2)
+
+# Adicionar uma legenda
+legend("topleft", legend = c("D = 1", "D = 1.7"), col = c("blue", "red"), lwd = 2)
+
+```
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+```{R}
+# Definir a função f(x)
+f <- function(x, a, b, c, D) {
+  return(c + (1 - c) / (1 + exp(-D * a * (x - b))))
+}
+
+# Definir os parâmetros
+a <- 1.5
+b <- 1
+c <- 0.2
+D <- 1.7
+
+# Gerar os valores de x no intervalo
+x_vals <- seq(-5, 5, by = 0.01)
+
+# Calcular os valores de f(x) para cada valor de x
+y_vals <- f(x_vals, a, b, c, D)
+
+# Plotar o gráfico
+plot(x_vals, y_vals, type = "l", col = "blue", lwd = 2,
+     xlab = "x", ylab = "f(x)", main = "Gráfico da função f(x) = c + (1 - c) / (1 + exp(-D a (x - b)))")
+
+
+```
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+```{R}
+# Definir a função logística
+logistic <- function(x, a, b, c) {
+  return(c + (1 - c) / (1 + exp(-a * (x - b))))
+}
+
+# Definir os parâmetros das funções logísticas
+params <- list(
+  c(1, 0.5, 0.2),  # Parâmetros (a, b, c) para a 1ª função logística
+  c(1, 1.5, 0.2),  # Parâmetros (a, b, c) para a 2ª função logística
+  c(2, 1.5, 0.2)   # Parâmetros (a, b, c) para a 3ª função logística
+)
+
+# Gerar valores de x no intervalo
+x_vals <- seq(-5, 5, by = 0.01)
+
+# Calcular a densidade da normal padrão (refletida)
+y_vals_normal_reflected <- -dnorm(x_vals)
+
+# Calcular as funções logísticas para os diferentes parâmetros
+y_vals_logistic1 <- logistic(x_vals, params[[1]][1], params[[1]][2], params[[1]][3])
+y_vals_logistic2 <- logistic(x_vals, params[[2]][1], params[[2]][2], params[[2]][3])
+y_vals_logistic3 <- logistic(x_vals, params[[3]][1], params[[3]][2], params[[3]][3])
+
+# Plotar os gráficos
+plot(x_vals, y_vals_normal_reflected, type = "l", col = "blue", lwd = 2,
+     xlab = "x", ylab = "Valor", main = "Função Densidade Normal Refletida e Funções Logísticas", 
+     ylim = c(-1.5, 2)) # Ajustando o limite do eixo y
+
+# Adicionar as outras funções logísticas
+lines(x_vals, y_vals_logistic1, col = "red", lwd = 2)
+lines(x_vals, y_vals_logistic2, col = "green", lwd = 2)
+lines(x_vals, y_vals_logistic3, col = "purple", lwd = 2)
+
+# Adicionar uma legenda
+legend("topleft", legend = c("Densidade Normal Refletida", "(1, 0.5, 0.2)", "(1, 1.5, 0.2)", "(2, 1.5, 0.2)"),
+       col = c("blue", "red", "green", "purple"), lwd = 2)
+
+```
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+```{R}
+# Gerar n = 1000 valores da distribuição uniforme U(0, 1)
+n <- 1000
+valores_uniformes <- runif(n)
+
+# Plotar o histograma
+hist(valores_uniformes, main = "Histograma de uma variável aleatória U(0,1)", 
+     xlab = "Valores", ylab = "Frequência", col = "lightblue", border = "black", 
+     breaks = 20)  # Ajuste o número de intervalos (bins) com o argumento 'breaks'
+
+```
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+## Análise Exploratória de Dados (EDA)
+Em estatística, a análise exploratória de dados (AED) é uma abordagem à análise de conjuntos de dados de modo a resumir suas características principais, frequentemente com métodos visuais. Um modelo estatístico pode ou não ser usado, mas primariamente a AED tem como objetivo observar o que os dados podem nos dizer além da modelagem formal ou do processo de teste de hipóteses.
+Um Mini Roteiro para Realizar uma Análise Exploratória de Dados usando a Linguagem de Programação $R_{4.3}$ com auxílio da IDE RStudio.
+
+```{R}
+# Parâmetro p para a distribuição Bernoulli
+p <- 0.3
+n <- 1000
+
+# Gerar n valores de uma variável aleatória Bernoulli(p)
+valores_bernoulli <- rbinom(n, 1, p)
+
+# Calcular a média e variância amostral
+media_amostral <- mean(valores_bernoulli)
+variancia_amostral <- var(valores_bernoulli)
+
+# Valores teóricos para média e variância
+media_teorica <- p
+variancia_teorica <- p * (1 - p)
+
+# Exibir os resultados
+cat("Média amostral: ", media_amostral, "\n")
+cat("Média teórica: ", media_teorica, "\n")
+cat("Variância amostral: ", variancia_amostral, "\n")
+cat("Variância teórica: ", variancia_teorica, "\n")
+
+```
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+A média amostral está próximo da média teórica, enquanto que a Variância amostral também está próxima da média teórica
+
+```{R}
+# Parâmetro p para a distribuição Bernoulli
+p <- 0.5
+n <- 10
+
+# Gerar n valores de uma variável aleatória Bernoulli(p)
+valores_bernoulli <- rbinom(n, 1, p)
+
+# Calcular a média e variância amostral
+media_amostral <- mean(valores_bernoulli)
+variancia_amostral <- var(valores_bernoulli)
+
+# Valores teóricos para média e variância
+media_teorica <- p
+variancia_teorica <- p * (1 - p)
+
+# Exibir os resultados
+cat("Média amostral: ", media_amostral, "\n")
+cat("Média teórica: ", media_teorica, "\n")
+cat("Variância amostral: ", variancia_amostral, "\n")
+cat("Variância teórica: ", variancia_teorica, "\n")
+
+```
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+```{R}
+# Parâmetro para a distribuição normal N(0,1)
+n <- 1000
+
+# Gerar n valores de uma variável aleatória normal N(0, 1)
+valores_normais <- rnorm(n, mean = 0, sd = 1)
+
+# Calcular a média e variância amostral
+media_amostral <- mean(valores_normais)
+variancia_amostral <- var(valores_normais)
+
+# Valores teóricos para média e variância
+media_teorica <- 0
+variancia_teorica <- 1
+
+# Exibir os resultados
+cat("Média amostral: ", media_amostral, "\n")
+cat("Média teórica: ", media_teorica, "\n")
+cat("Variância amostral: ", variancia_amostral, "\n")
+cat("Variância teórica: ", variancia_teorica, "\n")
+
+```
+
+
+

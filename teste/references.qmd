@@ -1,0 +1,25 @@
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::
+
+# References {.unnumbered}
+
+
+ 1. H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
+  Springer-Verlag New York, 2016.
+  
+ 2. Wickham H, François R, Henry L, Müller K, Vaughan D (2023). _dplyr: A
+  Grammar of Data Manipulation_. R package version 1.1.4,
+  <https://CRAN.R-project.org/package=dplyr>.
+  
+ 3. Xie Y, Cheng J, Tan X (2024). _DT: A Wrapper of the JavaScript
+  Library 'DataTables'_. R package version 0.33,
+  <https://CRAN.R-project.org/package=DT>.
+
+
+
+::: progress
+::: {.progress-bar style="width: 100%;"}
+:::
+:::

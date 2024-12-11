@@ -1,0 +1,47 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Estatistica Educacional"
+  author: 
+    - name: "Elton Pereira dos Santos"
+      id: md
+      orcid: 0000 - 0001 - 7262 - 3336
+      url: elton.santos@icen.ufpa.b
+      email: eton.santos@icen.ufpa.br
+      corresponding: true
+      affiliation: 
+        - Analista de dados
+        - Corpo de Bombeiros Militar do Pará
+  page-footer: 
+    left: 
+      Was Written by (SANTOS - 2024).
+    right: 
+      UFPA 2024.
+  search: true
+  downloads: [pdf,docx]
+  sharing: [twitter, facebook]
+       
+  subtitle: "Disciplina de Estatistica"
+  date: "06/12/2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    code-fold: true # -> code-fold:`true` para "ocultar" o bloco de códigos
+    theme: 
+      light: [pulse,custom.scss] # Tema modo claro
+      dark: [cyborg,custom.scss] # Tema modo escuro
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
+
+
